@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KisahSukses - Mini App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>KisahSukses</h1>
+      <p class="hint">YouTube mini (kanan), Game (bawah kanan), Chat AI (tengah) — static app. Fill config.js with your GROQ_API_KEY.</p>
+    </header>
+    <div class="layout">
+      <aside class="left">
+        <div class="search-box">
+          <input id="q" placeholder="Cari di Google..." />
+          <button id="search-btn">Cari</button>
+        </div>
+        <iframe id="search-frame" src="about:blank"></iframe>
+        <div class="quote-box">
+          <h3>Quote</h3>
+          <div id="quote">"Mulai dari yang kecil..."</div>
+          <button id="next-quote">Next</button>
+        </div>
+      </aside>
+
+      <main class="center">
+        <div class="chat-card">
+          <h2>Chat AI (Groq)</h2>
+          <div id="chat-log"></div>
+          <div class="chat-input">
+            <input id="chat-in" placeholder="Tulis pesan..." />
+            <button id="chat-send">Kirim</button>
+          </div>
+          <div id="ai-status" class="status"></div>
+        </div>
+      </main>
+
+      <aside class="right">
+        <div class="mini-card">
+          <h3>YouTube Mini</h3>
+          <div id="yt-mini"></div>
+          <div style="margin-top:8px"><button id="yt-next">Random</button></div>
+        </div>
+
+        <div class="mini-card">
+          <h3>Game</h3>
+          <iframe src="https://html5games.com/g/193/" width="100%" height="220" title="Game"></iframe>
+        </div>
+      </aside>
+    </div>
+    <footer>Static demo — remember: do NOT expose secret keys in public sites. See README.</footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="client.js"></script>
+  <script async src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
